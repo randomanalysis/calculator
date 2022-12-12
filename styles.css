@@ -3,13 +3,21 @@
     src: url('/home/adam/.local/share/fonts/digital-7.ttf');
   }
 
-.background {
+body {
     background-color: rgb(41, 75, 111);
 }
 
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
 .calculator {
+    margin: 30px;
     padding: 15px;
-    width: 400px;
+    width: 350px;
     background-color: rgb(73, 85, 85);
     display: flex;
     flex-direction: column;
@@ -18,22 +26,36 @@
 }
 
 .display {
-    padding: 5px;
+    padding: 5px 10px;
+    margin-left: 15px;
+    margin-right: 15px;
     background-color: darkseagreen;
     font-family: digial-7;
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    align-items: center;
+    text-align: right;
     word-wrap: break-word;
     word-break: break-all;
     border-radius: 2px;
     border: 1px black solid;
+    line-height: 0.75;
+}
+
+.previousCalc {
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: rgb(56, 56, 56);
+}
+
+.currentCalc {
+    font-size: 45px;
+    padding-bottom: 10px;
 }
 
 .buttons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    aspect-ratio: 1;
+    grid-gap: 10px;
+    padding: 15px
 }
 
 .deleteButton {
@@ -43,3 +65,29 @@
 .clearButton {
     grid-column: span 2;
 }
+
+[class$="Button"] {
+    border-radius: 3px;
+    border: 1px black solid;
+    font-weight: bold;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+#equals {
+    background-color: rgb(78, 200, 159);
+}
+
+#equals:hover {
+    background-color: chartreuse;
+}
+
+[class$="Button"]:hover {
+    background-color: chartreuse;
+}
+
+.opsButton {
+    background-color: rgb(154, 182, 234);
+}
+
