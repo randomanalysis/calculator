@@ -1,0 +1,45 @@
+@font-face {
+    font-family: digial-7;
+    src: url('/home/adam/.local/share/fonts/digital-7.ttf');
+  }
+
+.background {
+    background-color: rgb(41, 75, 111);
+}
+
+.calculator {
+    padding: 15px;
+    width: 400px;
+    background-color: rgb(73, 85, 85);
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px black solid;
+}
+
+.display {
+    padding: 5px;
+    background-color: darkseagreen;
+    font-family: digial-7;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: center;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-radius: 2px;
+    border: 1px black solid;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.deleteButton {
+    grid-column: span 2;
+}
+
+.clearButton {
+    grid-column: span 2;
+}
